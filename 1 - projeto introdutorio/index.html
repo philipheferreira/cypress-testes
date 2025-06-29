@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exemplo Cypress</title>
+</head>
+<body>
+  <input id="nome" type="text" placeholder="Digite seu nome" />
+  <button onclick="saudar()">Enviar</button>
+  <p id="resultado"></p>
+
+  <script>
+    function saudar() {
+      const nome = document.getElementById("nome").value;
+      document.getElementById("resultado").innerText = `Olá, ${nome}!`;
+    }
+  </script>
+</body>
+</html>
