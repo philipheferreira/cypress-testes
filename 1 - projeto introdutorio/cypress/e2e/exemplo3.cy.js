@@ -1,4 +1,4 @@
-// operação padrão para teste automatizado da pagina form
+// operação simulando a operação de click manual no botão
 
 describe('Página JavaScript Puro', () => {
   it('deve mostrar saudação com o nome digitado', () => {
@@ -7,7 +7,7 @@ describe('Página JavaScript Puro', () => {
     // INICIO DA SIMULAÇÃO DO CLICK DE FORMA MANUAL
     cy.contains('button', 'Enviar')
       .trigger('mouseover')
-      .wait(500) // tempo antes do clique
+      .wait(1000) // tempo antes do clique
       .click()
     // FIM DA SIMULAÇÃO DO CLICK DE FORMA MANUAL
     cy.get('#resultado').should('contain', 'Olá, Philiphe!') // Pega o campo id resultado e identifica que deve ter Olá, Philiphe para confirmar que funcionou
